@@ -23,6 +23,13 @@ public class UserController {
     @Resource
     private SysUserService sysUserService;
 
+    @RequestMapping("/logout.page")
+    public void logout(HttpServletRequest request,HttpServletResponse response) throws IOException {
+        request.getSession().invalidate();
+        String path ="signin.jsp";
+        response.sendRedirect(path);
+    }
+
     @RequestMapping("/login.page")
     public void login(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String username = request.getParameter("username");
