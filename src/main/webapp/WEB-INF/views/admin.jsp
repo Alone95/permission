@@ -16,6 +16,12 @@
 
 <body class="no-skin">
 <div id="navbar" class="navbar navbar-default">
+
+    <script>
+        $(function(){
+            $(".dropdown-toggle").dropdown('toggle');
+        });
+    </script>
     <div class="navbar-container">
         <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler">
             <span class="sr-only">Toggle sidebar</span>
