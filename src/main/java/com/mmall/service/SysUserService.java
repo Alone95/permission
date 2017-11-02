@@ -3,11 +3,13 @@ package com.mmall.service;
 import com.google.common.base.Preconditions;
 import com.mmall.beans.PageQuery;
 import com.mmall.beans.PageResult;
+import com.mmall.common.RequestHolder;
 import com.mmall.dao.SysUserMapper;
 import com.mmall.exception.ParamException;
 import com.mmall.model.SysUser;
 import com.mmall.param.UserParam;
 import com.mmall.util.BeanValidator;
+import com.mmall.util.IpUtil;
 import com.mmall.util.MD5Util;
 import com.mmall.util.PasswordUtil;
 import org.springframework.stereotype.Service;
@@ -47,8 +49,8 @@ public class SysUserService {
                 .deptId(param.getDeptId())
                 .status(param.getStatus())
                 .remark(param.getRemark()).build();
-        user.setOperator("system");//TODO;
-        user.setOperateIp("127.0.0.1");//TODO;
+        user.setOperator(RequestHolder.getCurrentUser().getUsername());
+        user.setOperateIp(IpUtil.getRemoteIp(RequestHolder.getCurrentRequest()));
         user.setOperateTime(new Date());//TODO;
 
 
@@ -75,6 +77,9 @@ public class SysUserService {
                 .deptId(param.getDeptId())
                 .status(param.getStatus())
                 .remark(param.getRemark()).build();
+        after.setOperator(RequestHolder.getCurrentUser().getUsername());
+        after.setOperateIp(IpUtil.getRemoteIp(RequestHolder.getCurrentRequest()));
+        after.setOperateTime(new Date());
         sysUserMapper.updateByPrimaryKeySelective(after);
 
     }

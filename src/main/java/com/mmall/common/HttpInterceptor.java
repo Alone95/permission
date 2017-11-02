@@ -36,7 +36,7 @@ public class HttpInterceptor extends HandlerInterceptorAdapter {
 //        log.info("request finished. url:{}, cost:{}", url, end - start);
 //        Map parameterMap = request.getParameterMap();
 //        log.info("request finished. url:{}, params:{}", url, JsonMapper.obj2String(parameterMap));
-//        removeThreadLocalInfo();
+        removeThreadLocalInfo();
 
     }
 
@@ -49,10 +49,10 @@ public class HttpInterceptor extends HandlerInterceptorAdapter {
 
         Map parameterMap = request.getParameterMap();
         log.info("request exception. url:{}, params:{}", url, JsonMapper.obj2String(parameterMap));
-//        removeThreadLocalInfo();
+        removeThreadLocalInfo();
 
     }
     public void removeThreadLocalInfo() {
-        // RequestHolder.remove();;
+         RequestHolder.remove();;
     }
 }
