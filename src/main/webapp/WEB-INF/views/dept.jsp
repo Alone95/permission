@@ -10,6 +10,7 @@
 <head>
     <title>部门管理</title>
     <jsp:include page="/common/backend_common.jsp"/>
+    <jsp:include page="/common/page.jsp"/>
 
 </head>
 <body class="no-skin" youdao="bind" style="background: white">
@@ -343,7 +344,7 @@
                 }
             })
         }
-
+        //渲染用户列表及其页面
         function renderUserListAndPage(result, url) {
             if (result.ret) {
                 if (result.data.total > 0){
@@ -378,6 +379,7 @@
                 }
                 var pageSize = $("#pageSize").val();
                 var pageNo = $("#userPage .pageNo").val() || 1;
+
                 renderPage(url, result.data.total, pageNo, pageSize, result.data.total > 0 ? result.data.data.length : 0, "userPage", renderUserListAndPage);
             } else {
                 showMessage("获取部门下用户列表", result.msg, false);
