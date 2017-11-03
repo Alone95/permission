@@ -226,10 +226,14 @@
 <script src="/assets/js/ace-elements.min.js"></script>
 <script src="/assets/js/ace.min.js"></script>
 
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".myDropdownHandle").dropdown();
+    });
+</script>
 <script>
 
     $(document).ready(function () {
-        $(".myDropdownHandle").dropdown("toggle");
         $(".popstyle").removeAttr("target");
         $(".popstyle").each(function () {
             var $this = $(this)

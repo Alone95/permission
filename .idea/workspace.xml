@@ -7,10 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec60d50f-ef1f-4c89-ba57-70a1a77dcc6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/common/backend_common.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/common/backend_common.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/common/page.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/common/page.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -83,10 +80,10 @@
       <file leaf-file-name="admin.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="231" column="28" lean-forward="false" selection-start-line="231" selection-start-column="28" selection-end-line="231" selection-end-column="28" />
+            <state relative-caret-position="158">
+              <caret line="230" column="28" lean-forward="false" selection-start-line="230" selection-start-column="28" selection-end-line="230" selection-end-column="28" />
               <folding>
-                <marker date="1509677273384" expanded="true" signature="7108:7219" ph="..." />
+                <marker date="1509684289919" expanded="true" signature="7108:7219" ph="..." />
               </folding>
             </state>
           </provider>
@@ -218,9 +215,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="46" />
-    <option name="y" value="16" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="77" />
+    <option name="y" value="21" />
     <option name="width" value="1240" />
     <option name="height" value="720" />
   </component>
@@ -617,15 +614,15 @@
       <workItem from="1509349022929" duration="13491000" />
       <workItem from="1509517772183" duration="5040000" />
       <workItem from="1509592848899" duration="23478000" />
-      <workItem from="1509671228636" duration="6239000" />
+      <workItem from="1509671228636" duration="6843000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115412000" />
+    <option name="totallyTimeSpent" value="116016000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="46" y="16" width="1240" height="720" extended-state="1" />
+    <frame x="77" y="21" width="1240" height="720" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1003,7 +1000,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1509677276492" expanded="true" signature="7257:7368" ph="..." />
+            <marker date="1509684294723" expanded="true" signature="7257:7368" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1069,10 +1066,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="231" column="28" lean-forward="false" selection-start-line="231" selection-start-column="28" selection-end-line="231" selection-end-column="28" />
+        <state relative-caret-position="158">
+          <caret line="230" column="28" lean-forward="false" selection-start-line="230" selection-start-column="28" selection-end-line="230" selection-end-column="28" />
           <folding>
-            <marker date="1509677273384" expanded="true" signature="7108:7219" ph="..." />
+            <marker date="1509684289919" expanded="true" signature="7108:7219" ph="..." />
           </folding>
         </state>
       </provider>
