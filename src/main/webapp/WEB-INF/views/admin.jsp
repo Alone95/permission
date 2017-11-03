@@ -1,12 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: lds
-  Date: 2017/10/30
-  Time: 21:38
-  To change this template use File | Settings | File Templates.
---%>
-<%--<%@ page import="com.mmall.common.RequestHolder" %>--%>
-<%--<%@ page import="com.mmall.model.SysUser" %>--%>
+<%@ page import="com.mmall.common.RequestHolder" %>
+<%@ page import="com.mmall.model.SysUser" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,15 +8,11 @@
 </head>
 
 <body class="no-skin">
-<div id="navbar" class="navbar navbar-default">
+<div id="navbar" class="navbar navbar-default ace-save-state">
 
-    <script>
-        $(function(){
-            $(".dropdown-toggle").dropdown('toggle');
-        });
-    </script>
-    <div class="navbar-container">
-        <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler">
+
+    <div class="navbar-container ace-save-state " id="navbar-container">
+        <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
             <span class="sr-only">Toggle sidebar</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -31,17 +20,22 @@
         </button>
 
         <div class="navbar-header pull-left">
-            <a href="/admin/page.do" class="navbar-brand">
+            <a href="/admin/index.page" class="navbar-brand">
                 <small>
                     <i class="fa fa-leaf"></i>
                     管理员控制台
                 </small>
             </a>
         </div>
+        <%--<script>--%>
+            <%--$(function(){--%>
+                <%--$(".dropdown-toggle").dropdown();--%>
+            <%--});--%>
+        <%--</script>--%>
         <div class="navbar-buttons navbar-header pull-right" role="navigation">
             <ul class="nav ace-nav">
-                <li class="light-blue dropdown-modal">
-                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                <li class="light-blue dropdown">
+                    <a data-toggle="dropdown" href="#" class="myDropdownHandle"  >
                         <span class="user-info">
                             <small>欢迎,</small>
                             Admin
@@ -235,6 +229,7 @@
 <script>
 
     $(document).ready(function () {
+        $(".myDropdownHandle").dropdown("toggle");
         $(".popstyle").removeAttr("target");
         $(".popstyle").each(function () {
             var $this = $(this)
@@ -260,6 +255,7 @@
         });
     });
 </script>
+
 </body>
 </html>
 
