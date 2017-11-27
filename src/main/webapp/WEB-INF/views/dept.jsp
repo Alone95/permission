@@ -494,13 +494,14 @@
                         }, function (data) {
                             showMessage("新增部门", data.msg, false);
                         })
-                    },
+                },
                     "取消": function () {
                         $("#dialog-dept-form").dialog("close");
                     }
                 }
             });
         });
+
 
         function recursiveRenderDeptSelect(deptList, level) {
             level = level | 0;
