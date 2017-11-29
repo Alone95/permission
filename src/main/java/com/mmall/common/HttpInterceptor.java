@@ -53,6 +53,6 @@ public class HttpInterceptor extends HandlerInterceptorAdapter {
 
     }
     public void removeThreadLocalInfo() {
-         RequestHolder.remove();;
+         RequestHolder.remove();
     }
 }
