@@ -65,6 +65,41 @@
     <url-pattern>/sys/druid/*</url-pattern>
   </servlet-mapping>
 
+
+  <servlet>
+    <servlet-name>Kaptcha</servlet-name>
+    <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+    <init-param>
+      <description>干扰实现类</description>
+      <param-name>kaptcha.noise.impl</param-name>
+      <param-value>
+        com.google.code.kaptcha.impl.DefaultNoise
+      </param-value>
+    </init-param>
+    <init-param>
+      <description>
+        图片样式： 水纹com.google.code.kaptcha.impl.WaterRipple
+        鱼眼com.google.code.kaptcha.impl.FishEyeGimpy
+        阴影com.google.code.kaptcha.impl.ShadowGimpy
+      </description>
+      <param-name>kaptcha.obscurificator.impl</param-name>
+      <param-value>
+        com.google.code.kaptcha.impl.WaterRipple
+      </param-value>
+    </init-param>
+    <init-param>
+      <description>背景颜色渐变，开始颜色</description>
+      <param-name>kaptcha.background.clear.from</param-name>
+      <param-value>blue</param-value>
+    </init-param>
+
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Kaptcha</servlet-name>
+    <url-pattern>/kaptcha.jpg</url-pattern>
+  </servlet-mapping>
+
+
   <filter>
     <filter-name>DruidWebStatFilter</filter-name>
     <filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>

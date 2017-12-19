@@ -1,5 +1,6 @@
 package com.mmall.controller;
 
+import com.google.code.kaptcha.Constants;
 import com.mmall.model.SysUser;
 import com.mmall.service.SysUserService;
 import com.mmall.util.MD5Util;
@@ -34,7 +35,10 @@ public class UserController {
     public void login(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-
+        //从session中取出servlet生成的验证码
+        String kaptchExpected = (String) request.getSession().getAttribute(Constants.KAPTCHA_SESSION_KEY);
+        //获取用户页面输入的验证码
+        String kaptchReceived =request.getParameter("kaptcha");
         SysUser sysUser = sysUserService.findByKeyword(username);
         String errorMsg = "";
         String ret = request.getParameter("ret");
@@ -43,10 +47,14 @@ public class UserController {
             errorMsg = "用户名不能为空";
         }else if(StringUtils.isBlank(password)){
             errorMsg = "密码不能为空";
+        }else if(StringUtils.isBlank(kaptchReceived)){
+            errorMsg = "验证码不能为空";
         }else if(sysUser==null){
             errorMsg = "查询不到指定用户";
         }else if(!sysUser.getPassword().equals(MD5Util.encrypt(password))){
             errorMsg = "用户名或者密码错误";
+        }else if (!kaptchReceived.equalsIgnoreCase(kaptchExpected)){
+            errorMsg = "验证码错误,请重新输入";
         }else if(sysUser.getStatus()!=1){
             errorMsg = "用户已被冻结,请联系管理员";
         }else{
